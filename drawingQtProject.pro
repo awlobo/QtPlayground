@@ -1,21 +1,37 @@
-QT += quickcontrols2
+QT += quickcontrols2 \
+    widgets \
+    core
 
-CONFIG += c++11
+CONFIG += \
+    c++11 \
+    qmltypes
 
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp
+        src/main.cpp
 
-RESOURCES += qml.qrc
+
+RESOURCES += \
+    qml/qml.qrc \
+    res/images/images.qrc \
+    res/fonts/fonts.qrc \
+    imports/imports.qrc \
+    conf/conf.qrc
 
 TRANSLATIONS += \
-    drawingQtProject_es_ES.ts
+    translations/drawingQtProject_es_ES.ts
 
-# Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
+OTHER_FILES += \
+    README.md
+
+INCLUDEPATH += \
+    src \
+    qml \
+
+QML_IMPORT_PATH = $$PWD/imports
+QML_IMPORT_MAJOR_VERSION = 1
+QML_IMPORT_NAME = awlobo.imports
 
 # Additional import path used to resolve QML modules just for Qt Quick Designer
 QML_DESIGNER_IMPORT_PATH =
@@ -29,5 +45,8 @@ ANDROID_ABIS = armeabi-v7a
 
 QT_QUICK_CONTROLS_STYLE=universal ./app
 
+HEADERS +=
+
 DISTFILES += \
-    qtquickcontrols2.conf
+    qml/*.qml
+
