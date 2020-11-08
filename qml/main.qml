@@ -10,9 +10,6 @@ ApplicationWindow {
     visible: true
     title: qsTr("Hello World")
 
-    Material.theme: Material.Light
-    //    Material.foreground: Material.color(Material.Red)
-
     Rectangle{
         Layout.fillWidth: true
         Layout.fillHeight: true
