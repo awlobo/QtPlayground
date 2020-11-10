@@ -9,7 +9,8 @@ SOURCES += \
 
 RESOURCES += \
         qml/qml.qrc \
-        conf/conf.qrc
+        conf/conf.qrc \
+        res/images.qrc
 
 TRANSLATIONS += \
     translations/QtPlaygroundApp_es_ES.ts
