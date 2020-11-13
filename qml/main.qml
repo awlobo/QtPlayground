@@ -3,26 +3,17 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls.Material 2.12
+import QtQuick.Controls.Material.impl 2.12
 
 ApplicationWindow {
-    width: 640
-    height: 480
+    id: root
+    width: 500
+    height: 500
     visible: true
+    color: "white"
     title: qsTr("Hello World")
+    Component.onCompleted: console.log("Rectangulo %1 - %2 - %3".arg(width).arg(height).arg(title))
 
-    Rectangle{
-        Layout.fillWidth: true
-        Layout.fillHeight: true
 
-        Button {
-            id: lightRed
-            text: "Press me"
-            highlighted: true
-            anchors.leftMargin: 20
-            anchors.topMargin: 20
-            anchors.left: parent.left
-            anchors.top: parent.top
-            Material.elevation: 1
-        }
-    }
+    Clock{}
 }
