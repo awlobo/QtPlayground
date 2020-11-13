@@ -28,3 +28,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     README.md \
+
+ANDROID_ABIS = armeabi-v7a
